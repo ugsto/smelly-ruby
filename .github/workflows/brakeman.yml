@@ -11,4 +11,4 @@ jobs:
       - name: Brakeman code scanning
         uses: standardnotes/brakeman-action@v1.0.0
         with:
-          options: "--color -q"
+          options: "--force"
