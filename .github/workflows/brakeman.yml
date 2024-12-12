@@ -1,0 +1,14 @@
+name: Test pull requests
+on:
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Brakeman code scanning
+        uses: standardnotes/brakeman-action@v1.0.0
+        with:
+          options: "--color -q"
